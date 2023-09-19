@@ -8,7 +8,7 @@ const PANEL_ID = `${ADDON_ID}/panel`;
 addons.register(ADDON_ID, (api) => {
   addons.add(PANEL_ID, {
     type: types.PANEL,
-    title: 'Code Display',
+    title: 'Code Display 1',
     render: ({ active }) => {
       const story = api.getCurrentStory();
       const code = story?.parameters?.code || '';
