@@ -1,0 +1,150 @@
+{
+  "name": "carbon-components-angular",
+  "version": "0.0.0",
+  "description": "Next generation components",
+  "main": "index.js",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "storybook": "ng run carbon-components-angular:storybook",
+    "docs:build": "compodoc -p tsconfig.doc.json -t",
+    "docs:json": "compodoc --config compodoc.storybook.json",
+    "lint": "tslint 'src/**/*.ts'",
+    "lint:fix": "tslint --fix 'src/**/*.ts'",
+    "test": "ng test --no-watch",
+    "test:watch": "ng test --watch",
+    "build-storybook": "ng run carbon-components-angular:build-storybook",
+    "semantic-release": "semantic-release",
+    "commit": "git-cz -s",
+    "ng": "ng",
+    "ng:build": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng build",
+    "prepare": "husky install"
+  },
+  "release": {
+    "pkgRoot": "dist",
+    "branches": [
+      {
+        "name": "master",
+        "channel": "latest"
+      },
+      {
+        "name": "next",
+        "channel": "next"
+      },
+      {
+        "name": "v3",
+        "channel": "carbon-v3",
+        "range": "3.x"
+      },
+      {
+        "name": "v9",
+        "channel": "carbon-v9",
+        "range": "2.X"
+      },
+      {
+        "name": "v10",
+        "channel": "carbon-v10",
+        "range": "4.x"
+      }
+    ],
+    "tagFormat": "v${version}"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-components"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:carbon-design-system/carbon-components-angular.git"
+  },
+  "license": "Apache-2.0",
+  "author": "IBM",
+  "peerDependencies": {
+    "@angular/common": "^14.0.0 || ^15.0.0 || ^16.0.0",
+    "@angular/core": "^14.0.0 || ^15.0.0 || ^16.0.0",
+    "@angular/forms": "^14.0.0 || ^15.0.0 || ^16.0.0",
+    "@carbon/styles": "^1.5.0",
+    "rxjs": "^6.0.0 || ^7.0.0",
+    "zone.js": "^0.11.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "14.2.11",
+    "@angular-devkit/core": "14.2.11",
+    "@angular/animations": "14.3.0",
+    "@angular/cli": "14.2.11",
+    "@angular/common": "14.3.0",
+    "@angular/compiler": "14.3.0",
+    "@angular/compiler-cli": "14.3.0",
+    "@angular/core": "14.3.0",
+    "@angular/forms": "14.3.0",
+    "@angular/platform-browser": "14.3.0",
+    "@angular/platform-browser-dynamic": "14.3.0",
+    "@angular/router": "14.3.0",
+    "@babel/core": "7.9.6",
+    "@carbon/styles": "1.36.0",
+    "@carbon/themes": "11.24.0",
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
+    "@compodoc/compodoc": "1.1.21",
+    "@storybook/addon-a11y": "7.0.18",
+    "@storybook/addon-actions": "7.0.18",
+    "@storybook/addon-essentials": "7.0.18",
+    "@storybook/addon-links": "7.0.18",
+    "@storybook/addon-storysource": "7.0.18",
+    "@storybook/angular": "7.0.18",
+    "@storybook/theming": "7.0.18",
+    "@types/jasmine": "3.8.0",
+    "@types/node": "12.20.55",
+    "@types/resize-observer-browser": "^0.1.7",
+    "babel-loader": "8.0.5",
+    "chai": "4.2.0",
+    "codelyzer": "6.0.0",
+    "commitizen": "4.2.4",
+    "core-js": "2.6.11",
+    "cz-conventional-changelog-components": "1.0.0",
+    "element-closest-polyfill": "1.0.0",
+    "exported-tests": "1.0.1",
+    "file-type": "12.4.0",
+    "gulp": "4.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-tap": "1.0.1",
+    "husky": "8.0.1",
+    "jasmine-core": "3.8.0",
+    "jasmine-spec-reporter": "5.0.0",
+    "karma": "6.4.0",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-cli": "2.0.0",
+    "karma-coverage-istanbul-reporter": "3.0.2",
+    "karma-jasmine": "4.0.0",
+    "karma-jasmine-html-reporter": "1.7.0",
+    "lodash-es": "4.17.21",
+    "ng-packagr": "14.2.2",
+    "postcss": "8.4.14",
+    "postcss-loader": "7.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rxjs": "7.5.0",
+    "sass": "1.57.0",
+    "sass-loader": "13.2.0",
+    "semantic-release": "17.2.3",
+    "storybook": "7.0.18",
+    "storybook-addon-code-display-ts": "file:'./storybook-addon-code-display-ts'",
+    "ts-helpers": "1.1.2",
+    "tslint": "6.1.3",
+    "typescript": "4.6.4",
+    "whatwg-fetch": "3.0.0",
+    "zone.js": "0.11.4"
+  },
+  "dependencies": {
+    "@carbon/icon-helpers": "10.37.0",
+    "@carbon/icons": "11.14.0",
+    "@carbon/telemetry": "0.1.0",
+    "@carbon/utils-position": "1.1.4",
+    "@storybook/addon-contexts": "^5.3.21",
+    "@storybook/addon-storysource": "^7.4.2",
+    "@whitespace/storybook-addon-html": "^5.1.6",
+    "flatpickr": "4.6.13",
+    "patch-package": "^8.0.0",
+    "tslib": "2.3.0"
+  }
+}

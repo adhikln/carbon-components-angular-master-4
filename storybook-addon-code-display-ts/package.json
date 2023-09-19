@@ -1,0 +1,20 @@
+{
+  "name": "storybook-addon-code-display-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-addon": "webpack --config ./node_modules/@storybook/core/dist/server/addons.js --output-path ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@storybook/addons": "^7.4.2",
+    "@storybook/api": "^7.4.2",
+    "@storybook/components": "^7.4.2",
+    "react": "^18.2.0",
+    "react-syntax-highlighter": "^15.5.0"
+  }
+}
